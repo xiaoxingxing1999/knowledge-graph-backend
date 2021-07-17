@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: dev
+  thymeleaf:
+    cache: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/coin?serverTimezone=CTT&characterEncoding=UTF-8&useSSL=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    max-active: 200
+    max-idle: 20
+    min-idle: 10
+mybatis:
+  mapper-locations: classpath:dataImpl/*Mapper.xml
+server:
+  port: 8082
+  session-timeout: 30
+  tomcat.max-threads: 1
+  tomcat.uri-encoding: UTF-8
+
+aliyun:
+  oss:
+    file:
+      endpoint: oss-cn-hangzhou.aliyuncs.com
+      keyid: LTAI4G8aY3VqV55xwwtvfNyi
+      keysecret: NoITeRzQHAoFSm9OTx70Oj1TeK1P0G
+      bucketname: software-engineering-iii

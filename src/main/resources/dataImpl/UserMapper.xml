@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.coin.data.UserMapper">
+    <!-- 此处需要注意的是，由于我们数据库定义的id存储类型为intbig,但是我们的Entity中Id是Long -->
+    <!-- 前面的两种方式插入没问题，此处报了数据库类型异常 -->
+    <!-- 所以数据库的ID类型改为了Varchar -->
+    <resultMap id="User" type="com.example.coin.po.User">
+        <id column="id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="email" property="email"/>
+    </resultMap>
+    <select id="getUserInfo" resultMap="User">
+        select * from user where email=#{email}
+    </select>
+    <select id="getUserInfoById" resultMap="User">
+        select * from user where id=#{id}
+    </select>
+    <insert id="addUser" parameterType="com.example.coin.po.User" useGeneratedKeys="true" keyProperty="id">
+        insert into user(username, password, email)
+               values(#{username}, #{password}, #{email})
+    </insert>
+    <insert id="update" parameterType="com.example.coin.po.User" useGeneratedKeys="true" keyProperty="id">
+        update user set username=#{username}, password=#{password}, email=#{email} where email=#{email}
+    </insert>
+
+</mapper>
