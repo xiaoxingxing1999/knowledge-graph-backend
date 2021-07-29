@@ -72,7 +72,7 @@ public class UserServiceImpl implements UserService {
                     "        <span style=\"font-size: 24px; color: red\">" + newCode + "</span>", "text/html;charset=UTF-8");
             message.setSentDate(new Date());
             Transport transport = session.getTransport();
-            transport.connect("462211353@qq.com", "ogvxvcgzwucccagd");
+            transport.connect("此处被删除", "此处被删除");
             transport.sendMessage(message, message.getAllRecipients());
             transport.close();
         } catch (Exception e) {

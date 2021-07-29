@@ -22,10 +22,10 @@ public class ConstantPropertiesUtils implements InitializingBean {
     private String bucketName;
 
     /*定义公有静态常量*/
-    public static String ENDPOINT="oss-cn-hangzhou.aliyuncs.com";
-    public static String KEYID="LTAI4G8aY3VqV55xwwtvfNyi";
-    public static String KEYSECRET="NoITeRzQHAoFSm9OTx70Oj1TeK1P0G";
-    public static String BUCKETNAME="software-engineering-iii";
+    public static String ENDPOINT="此处被删除";
+    public static String KEYID="此处被删除";
+    public static String KEYSECRET="此处被删除";
+    public static String BUCKETNAME="此处被删除";
 
 
     @Override

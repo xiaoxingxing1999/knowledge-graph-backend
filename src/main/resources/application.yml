@@ -22,7 +22,7 @@ server:
 aliyun:
   oss:
     file:
-      endpoint: oss-cn-hangzhou.aliyuncs.com
-      keyid: LTAI4G8aY3VqV55xwwtvfNyi
-      keysecret: NoITeRzQHAoFSm9OTx70Oj1TeK1P0G
-      bucketname: software-engineering-iii
+      endpoint: 此处被删除
+      keyid: 此处被删除
+      keysecret: 此处被删除
+      bucketname: 此处被删除
